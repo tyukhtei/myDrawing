@@ -1,0 +1,123 @@
+body{
+    background: #222633;
+    font-family: "Segoe UI", sans-serif;
+    color: #9f9f9f;
+}
+
+header{
+    display: flex;
+}
+
+.logo{
+    animation: logo 120s infinite;
+    width: 20px;
+    height: 20px;
+    margin: 0 15px 0 0;
+}
+
+@keyframes logo {
+    0%{transform: rotateZ(0)}
+    1%{transform: rotateZ(360deg)}
+    1.0001%{transform: rotateZ(0deg)}
+    100%{transform: rotateZ(0deg)}
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #9f9f9f;
+    margin: 10px 0;
+}
+
+canvas{
+    background: #fff;
+    box-shadow: 0 0 5px #83b2fc;
+    height: 400px;
+    width: 800px;
+    border: 1px solid #83b2fc;
+}
+
+.settings{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input, button{
+    margin: 0 15px 0 5px;
+}
+
+input, input[type="color"], input[type="color" i]::-webkit-color-swatch-wrapper, button{
+    border: none;
+    padding: 0;
+    height: 20px;
+    width: 80px;
+}
+
+button{
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    border: 1px solid #9f9f9f;
+    background: #121625;
+    color: #9f9f9f;
+    transition: .3s;
+}
+
+video{
+    background: ##efefef;
+}
+
+.pageModalWindow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    top: -100%;
+    left: 0;
+}
+
+.modalWindow{
+    background: #efefef;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    top: -1000px;
+    left: calc(50% - 271px);
+    transition: .2s ease-in-out;
+}
+
+.modalWindow .btnCancel{
+    background: #df2020;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 0 0 calc(100% - 30px);
+}
+
+.modalWindow iframe{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+}
+
+.modalWindow label{
+    width: 500px;
+    margin: 10px 0 0 0;
+    color: #000;
+}
+
+.modalWindow input{
+    width: 500px;
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
